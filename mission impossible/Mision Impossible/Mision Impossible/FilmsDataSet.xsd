@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FilmsDataSet" targetNamespace="http://tempuri.org/FilmsDataSet.xsd" xmlns:mstns="http://tempuri.org/FilmsDataSet.xsd" xmlns="http://tempuri.org/FilmsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FilmsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FilmsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Mision_Impossible.Properties.Settings.GlobalReference.Default.FilmsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilmTableAdapter" GeneratorDataComponentClassName="FilmTableAdapter" Name="Film" UserDataComponentName="FilmTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FilmsConnectionString (Settings)" DbObjectName="Films.dbo.Film" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Название, Страна, Год, Режиссер, Картинка FROM dbo.Film</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+              <Mapping SourceColumn="Страна" DataSetColumn="Страна" />
+              <Mapping SourceColumn="Год" DataSetColumn="Год" />
+              <Mapping SourceColumn="Режиссер" DataSetColumn="Режиссер" />
+              <Mapping SourceColumn="Картинка" DataSetColumn="Картинка" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProducerTableAdapter" GeneratorDataComponentClassName="ProducerTableAdapter" Name="Producer" UserDataComponentName="ProducerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FilmsConnectionString (Settings)" DbObjectName="Films.dbo.Producer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ФИО FROM dbo.Producer</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ФИО" DataSetColumn="ФИО" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FilmsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FilmsDataSet" msprop:Generator_UserDSName="FilmsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Film" msprop:Generator_TableClassName="FilmDataTable" msprop:Generator_TableVarName="tableFilm" msprop:Generator_TablePropName="Film" msprop:Generator_RowDeletingName="FilmRowDeleting" msprop:Generator_RowChangingName="FilmRowChanging" msprop:Generator_RowEvHandlerName="FilmRowChangeEventHandler" msprop:Generator_RowDeletedName="FilmRowDeleted" msprop:Generator_UserTableName="Film" msprop:Generator_RowChangedName="FilmRowChanged" msprop:Generator_RowEvArgName="FilmRowChangeEvent" msprop:Generator_RowClassName="FilmRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Название" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_UserColumnName="Название">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Страна" msprop:Generator_ColumnVarNameInTable="columnСтрана" msprop:Generator_ColumnPropNameInRow="Страна" msprop:Generator_ColumnPropNameInTable="СтранаColumn" msprop:Generator_UserColumnName="Страна">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Год" msprop:Generator_ColumnVarNameInTable="columnГод" msprop:Generator_ColumnPropNameInRow="Год" msprop:Generator_ColumnPropNameInTable="ГодColumn" msprop:Generator_UserColumnName="Год" type="xs:int" />
+              <xs:element name="Режиссер" msprop:Generator_ColumnVarNameInTable="columnРежиссер" msprop:Generator_ColumnPropNameInRow="Режиссер" msprop:Generator_ColumnPropNameInTable="РежиссерColumn" msprop:Generator_UserColumnName="Режиссер" type="xs:int" />
+              <xs:element name="Картинка" msprop:Generator_ColumnVarNameInTable="columnКартинка" msprop:Generator_ColumnPropNameInRow="Картинка" msprop:Generator_ColumnPropNameInTable="КартинкаColumn" msprop:Generator_UserColumnName="Картинка" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Producer" msprop:Generator_TableClassName="ProducerDataTable" msprop:Generator_TableVarName="tableProducer" msprop:Generator_TablePropName="Producer" msprop:Generator_RowDeletingName="ProducerRowDeleting" msprop:Generator_RowChangingName="ProducerRowChanging" msprop:Generator_RowEvHandlerName="ProducerRowChangeEventHandler" msprop:Generator_RowDeletedName="ProducerRowDeleted" msprop:Generator_UserTableName="Producer" msprop:Generator_RowChangedName="ProducerRowChanged" msprop:Generator_RowEvArgName="ProducerRowChangeEvent" msprop:Generator_RowClassName="ProducerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ФИО" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_UserColumnName="ФИО">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
